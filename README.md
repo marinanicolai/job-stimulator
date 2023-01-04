@@ -1,16 +1,9 @@
-This repository is part of the [React Job Simulator] where you work in a professional dev environment with advanced tooling and workflows. You implement tasks based on designs starting from small bug fixes to full-blown features. Basically, you learn a lot of the things hands-on that you usually only experience once you joined a professional React team.
+This repository is part of the React Job Simulator where you work in a professional dev environment with advanced tooling and workflows. You implement tasks based on designs starting from small bug fixes to full-blown features. Basically, you learn a lot of the things hands-on that you usually only experience once you joined a professional React team.
 
 ## The Application
 
-The application is an error logging and monitoring tool similar to Sentry or Rollbar. You can find a deployed version of the main branch at [prolog.profy.dev](https://prolog.profy.dev). Note: you have to click the "Dashboard" link in the upper right corner to see the app as shown in the screenshot below.
+The application is an error logging and monitoring tool similar to Sentry or Rollbar.
 
-![The running application](docs/app.png)
-
-## Codebase Tour
-
-Watch this video for a tour through the codebase.
-
-[![Codebase tour](docs/codebase-tour.jpg)](https://www.youtube.com/watch?v=a_Z0yUsChlY)
 
 ## Getting Started
 
@@ -51,4 +44,4 @@ npm run storybook
 ```
 
 # job-stimulator
-# job-stimulator
+
