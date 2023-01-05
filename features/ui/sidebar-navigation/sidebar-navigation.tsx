@@ -144,13 +144,23 @@ const LinkList = styled(List)`
   flex: 1;
 `;
 
-const CollapseMenuItem = styled(MenuItemButton)`
-  display: none;
+const CollapseMenuItem = styled(MenuItemButton)<{ isCollapsed: boolean }>`
+   display: none;
+   
+   transform: rotate(
+    ${({ isCollapsed }) => (isCollapsed ? "180deg" : "0")}
+  );
+
+
 
   @media (min-width: ${breakpoint("desktop")}) {
     display: flex;
   }
 `;
+
+
+
+
 
 export function SidebarNavigation() {
   const router = useRouter();
@@ -191,16 +201,16 @@ export function SidebarNavigation() {
           <List>
             <MenuItemButton
               text="Support"
-              iconSrc="/icons/support.svg"
+              iconSrc={"/icons/support.svg"}
               isCollapsed={isSidebarCollapsed}
               onClick={() => alert("Support")}
             />
-            <CollapseMenuItem
+          <CollapseMenuItem    
               text="Collapse"
-              iconSrc="/icons/arrow-left.svg"
-              isCollapsed={isSidebarCollapsed}
+              iconSrc= {"/icons/arrow-left.svg"}
+              isCollapsed={isSidebarCollapsed} 
               onClick={() => toggleSidebar()}
-            />
+            /> 
           </List>
         </Nav>
       </FixedContainer>
