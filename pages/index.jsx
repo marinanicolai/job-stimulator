@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Routes } from "@config/routes";
+import Link from "next/link";
 
 const Header = styled.header`
   width: 100%;
@@ -28,12 +29,51 @@ const ContactButton = styled.button`
   }
 `;
 
+const NavItems = styled.ul`
+  display:flex;
+`;
+
+const NavItem = styled.li`
+ padding:0 16px;
+ list-style :none;
+`;
+
+const NavLink = styled.a`
+text-decoration: none;
+color: 667085
+
+`;
+
 const IssuesPage = () => {
   return (
     <div>
       <Header>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icons/logo-large.svg" alt="Prolog logo" />
+        <nav>
+          <NavItems>
+            <NavItem>
+              <Link href="/">
+              Home
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="/products">
+              Products
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="/documentation">
+              Documentation
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="/pricing">
+              Pricing 
+              </Link>
+            </NavItem>
+            </NavItems>
+        </nav>
         <a href={Routes.projects}>Dashboard</a>
       </Header>
       <ContactButton
